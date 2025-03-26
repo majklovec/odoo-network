@@ -108,7 +108,9 @@ msgstr "Neplatný formát IPv4 adresy."
 msgid ""
 "Invalid MAC address format. Use formats like 00:1A:2B:3C:4D:5E or "
 "00-1A-2B-3C-4D-5E"
-msgstr "Neplatný formát MAC adresy. Použijte formát jako 00:1A:2B:3C:4D:5E nebo 00-1A-2B-3C-4D-5E"
+msgstr ""
+"Neplatný formát MAC adresy. Použijte formát jako 00:1A:2B:3C:4D:5E nebo "
+"00-1A-2B-3C-4D-5E"
 
 #. module: network
 #: model:ir.model.fields,field_description:network.field_network_device__write_uid
@@ -158,6 +160,12 @@ msgid "Owner"
 msgstr "Vlastník"
 
 #. module: network
+#: model:ir.model.fields,field_description:network.field_res_partner__payment_reference_id
+#: model:ir.model.fields,field_description:network.field_res_users__payment_reference_id
+msgid "Payment Reference Id"
+msgstr "Variabilní symbol"
+
+#. module: network
 #: model:ir.model.fields,field_description:network.field_network_device__subnet_id
 msgid "Subnet"
 msgstr "Podsíť"
@@ -172,3 +180,14 @@ msgstr "Název podsítě"
 #: model:ir.ui.menu,name:network.menu_subnet
 msgid "Subnets"
 msgstr "Podsítě"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_network_device__user_id
+msgid "User"
+msgstr "Uživatel"
+
+#. module: network
+#: model:ir.ui.menu,name:network.menu_partners
+#: model:ir.actions.act_window,name:network.action_partner_custom_list
+msgid "Users"
+msgstr "Uživatelé"

@@ -4,5 +4,33 @@
 
     <menuitem id="menu_subnet" name="Subnets" parent="menu_network_management" sequence="10" action="action_subnet" />
     <menuitem id="menu_device" name="Devices" parent="menu_network_management" sequence="10" action="action_device" />
-    <menuitem id="menu_partners" name="Users" parent="menu_network_management" sequence="10" action="contacts.action_contacts" context="{'view_type': 'list'}" />
+
+    <!-- Custom Tree View for Partners -->
+    <record id="view_partner_custom_list" model="ir.ui.view">
+        <field name="name">res.partner.custom.list</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="street"/>
+                <field name="city"/>
+                <field name="payment_reference_id" />
+            </list>
+        </field>
+    </record>
+
+    <!-- Custom Action to Open the List View -->
+    <record id="action_partner_custom_list" model="ir.actions.act_window">
+        <field name="name">Users</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_partner_custom_list"/>
+        <field name="search_view_id" ref="base.view_res_partner_filter"/>
+        <field name="domain">[('company_type', '=', 'person')]</field>
+        <field name="context">{'res_partner_search_mode': 'customer','search_default_user': True}</field>
+    </record>
+
+    <!-- Update Menu to Use the Custom Action -->
+    <menuitem id="menu_partners" name="Users" parent="menu_network_management" action="action_partner_custom_list"/>
 </odoo>
