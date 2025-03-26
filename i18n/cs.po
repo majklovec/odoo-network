@@ -1,0 +1,174 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20250320\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-21 16:29+0000\n"
+"PO-Revision-Date: 2025-03-21 16:29+0000\n"
+"Last-Translator: Your Name <your.email@example.com>\n"
+"Language-Team: Czech <your-team@example.com>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_network_device__active
+msgid "Active"
+msgstr "Aktivní"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_network_subnet__cidr
+msgid "CIDR Block"
+msgstr "CIDR Blok"
+
+#. module: network
+#: model:ir.model,name:network.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_network_device__create_uid
+#: model:ir.model.fields,field_description:network.field_network_subnet__create_uid
+msgid "Created by"
+msgstr "Vytvořil"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_network_device__create_date
+#: model:ir.model.fields,field_description:network.field_network_subnet__create_date
+msgid "Created on"
+msgstr "Vytvořeno"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_network_subnet__description
+msgid "Description"
+msgstr "Popis"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_network_device__name
+msgid "Device Name"
+msgstr "Název zařízení"
+
+#. module: network
+#: model:ir.actions.act_window,name:network.action_device
+#: model:ir.model.fields,field_description:network.field_network_subnet__device_ids
+#: model:ir.model.fields,field_description:network.field_res_partner__device_ids
+#: model:ir.ui.menu,name:network.menu_device
+msgid "Devices"
+msgstr "Zařízení"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_network_device__display_name
+#: model:ir.model.fields,field_description:network.field_network_subnet__display_name
+msgid "Display Name"
+msgstr "Zobrazované jméno"
+
+#. module: network
+#: model:ir.model.fields,help:network.field_network_subnet__cidr
+msgid "E.g., 192.168.1.0/24"
+msgstr "Např.: 192.168.1.0/24"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_network_device__id
+#: model:ir.model.fields,field_description:network.field_network_subnet__id
+msgid "ID"
+msgstr "ID"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_network_device__ip_address
+msgid "IP Address"
+msgstr "IP adresa"
+
+#. module: network
+#. odoo-python
+#: code:addons/network/models/device.py:0
+msgid "IP address %s is not within the subnet %s."
+msgstr "IP adresa %s není v rámci podsítě %s."
+
+#. module: network
+#: model:ir.model.constraint,message:network.constraint_network_device_unique_ip_subnet
+msgid "IP must be unique per subnet!"
+msgstr "IP adresa musí být jedinečná v rámci podsítě!"
+
+#. module: network
+#. odoo-python
+#: code:addons/network/models/subnet.py:0
+msgid "Invalid CIDR format. Use formats like 192.168.1.0/24"
+msgstr "Neplatný formát CIDR. Použijte formát jako 192.168.1.0/24"
+
+#. module: network
+#. odoo-python
+#: code:addons/network/models/device.py:0
+msgid "Invalid IPv4 address format."
+msgstr "Neplatný formát IPv4 adresy."
+
+#. module: network
+#. odoo-python
+#: code:addons/network/models/device.py:0
+msgid ""
+"Invalid MAC address format. Use formats like 00:1A:2B:3C:4D:5E or "
+"00-1A-2B-3C-4D-5E"
+msgstr "Neplatný formát MAC adresy. Použijte formát jako 00:1A:2B:3C:4D:5E nebo 00-1A-2B-3C-4D-5E"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_network_device__write_uid
+#: model:ir.model.fields,field_description:network.field_network_subnet__write_uid
+msgid "Last Updated by"
+msgstr "Naposledy upravil"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_network_device__write_date
+#: model:ir.model.fields,field_description:network.field_network_subnet__write_date
+msgid "Last Updated on"
+msgstr "Naposledy upraveno"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_network_device__mac_address
+msgid "MAC Address"
+msgstr "MAC adresa"
+
+#. module: network
+#: model:ir.model.constraint,message:network.constraint_network_device_unique_mac
+msgid "MAC address must be unique!"
+msgstr "MAC adresa musí být jedinečná!"
+
+#. module: network
+#: model:ir.model,name:network.model_network_device
+msgid "Network Device"
+msgstr "Síťové zařízení"
+
+#. module: network
+#: model_terms:ir.ui.view,arch_db:network.view_partner_form_inherit
+msgid "Network Devices"
+msgstr "Síťová zařízení"
+
+#. module: network
+#: model:ir.ui.menu,name:network.menu_network_management
+msgid "Network Management"
+msgstr "Správa sítě"
+
+#. module: network
+#: model:ir.model,name:network.model_network_subnet
+msgid "Network Subnet"
+msgstr "Síťová podsíť"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_network_device__owner_id
+msgid "Owner"
+msgstr "Vlastník"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_network_device__subnet_id
+msgid "Subnet"
+msgstr "Podsíť"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_network_subnet__name
+msgid "Subnet Name"
+msgstr "Název podsítě"
+
+#. module: network
+#: model:ir.actions.act_window,name:network.action_subnet
+#: model:ir.ui.menu,name:network.menu_subnet
+msgid "Subnets"
+msgstr "Podsítě"

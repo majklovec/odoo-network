@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_network_management" name="Network Management" sequence="10"/>
+
+    <menuitem id="menu_subnet" name="Subnets" parent="menu_network_management" sequence="10" action="action_subnet" />
+    <menuitem id="menu_device" name="Devices" parent="menu_network_management" sequence="10" action="action_device" />
+    <menuitem id="menu_partners" name="Users" parent="menu_network_management" sequence="10" action="contacts.action_contacts" context="{'view_type': 'list'}" />
+</odoo>

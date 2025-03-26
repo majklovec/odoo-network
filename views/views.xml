@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="network.list">
+      <field name="name">network list</field>
+      <field name="model">network.network</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </list>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="network.action_window">
+      <field name="name">network window</field>
+      <field name="res_model">network.network</field>
+      <field name="view_mode">list,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="network.action_server">
+      <field name="name">network server</field>
+      <field name="model_id" ref="model_network_network"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "list,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="network" id="network.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="network.menu_1" parent="network.menu_root"/>
+    <menuitem name="Menu 2" id="network.menu_2" parent="network.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="network.menu_1_list" parent="network.menu_1"
+              action="network.action_window"/>
+    <menuitem name="Server to list" id="network" parent="network.menu_2"
+              action="network.action_server"/>
+-->
+  </data>
+</odoo>

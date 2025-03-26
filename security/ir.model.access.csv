@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_network_subnet_user,network.subnet.user,model_network_subnet,base.group_user,1,0,0,0
+access_network_subnet_manager,network.subnet.manager,model_network_subnet,base.group_system,1,1,1,1
+access_network_device_user,network.device.user,model_network_device,base.group_user,1,0,0,0
+access_network_device_manager,network.device.manager,model_network_device,base.group_system,1,1,1,1
