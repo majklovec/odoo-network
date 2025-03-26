@@ -11,7 +11,7 @@ class Subnet(models.Model):
     cidr = fields.Char(string="CIDR Block", required=True, help="E.g., 192.168.1.0/24")
     description = fields.Text(string="Description")
     device_ids = fields.One2many("network.device", "subnet_id", string="Devices")
-    # external_id = fields.Integer(string="Netadmin ID")
+    netadmin_id = fields.Integer(string="Netadmin ID")
 
     @api.constrains("cidr")
     def _check_cidr_format(self):

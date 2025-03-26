@@ -15,7 +15,7 @@
                 <field name="name"/>
                 <field name="mac_address"/>
                 <field name="ip_address"/>
-                <field name="owner_id"/>
+                <field name="partner_id"/>
                 <field name="subnet_id"/>
                 <field name="active"/>
             </list>
@@ -34,7 +34,7 @@
                             <field name="mac_address"/>
                             <field name="ip_address"/>
                             <field name="subnet_id"/>
-                            <field name="owner_id" domain="[('is_company', '=', False)]"/>
+                            <field name="partner_id" domain="[('is_company', '=', False)]"/>
                             <field name="active"/>
                         </group>
                     </group>

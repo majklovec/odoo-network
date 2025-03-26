@@ -155,7 +155,7 @@ msgid "Network Subnet"
 msgstr "Síťová podsíť"
 
 #. module: network
-#: model:ir.model.fields,field_description:network.field_network_device__owner_id
+#: model:ir.model.fields,field_description:network.field_network_device__partner_id
 msgid "Owner"
 msgstr "Vlastník"
 

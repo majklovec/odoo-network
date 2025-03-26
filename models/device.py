@@ -13,29 +13,21 @@ class Device(models.Model):
     ip_address = fields.Char(string="IP Address", required=True)
     subnet_id = fields.Many2one("network.subnet", string="Subnet", required=True)
     active = fields.Boolean(string="Active", default=True)
-    user_id = fields.Many2one("res.users", string="User")
-    owner_id = fields.Many2one("res.partner", string="Owner", required=True)
-    # external_id = fields.Integer(string="Netadmin ID")
+    partner_id = fields.Many2one("res.partner", string="Owner", required=True)
+    netadmin_id = fields.Integer(string="Netadmin ID")
 
     _sql_constraints = [
-        ("unique_mac", "unique (mac_address)", "MAC address must be unique!"),
+        # (
+        #     "unique_mac_subnet",
+        #     "unique (mac_address, subnet_id)",
+        #     "MAC address must be unique within the subnet!",
+        # ),
         (
             "unique_ip_subnet",
             "unique(ip_address, subnet_id)",
             "IP must be unique per subnet!",
         ),
     ]
-
-    @api.onchange("user_id")
-    def _onchange_user_id(self):
-        """
-        Update owner_id when user_id changes
-        """
-        if self.user_id:
-            # Get the partner associated with the selected user
-            self.owner_id = self.user_id.owner_id
-        else:
-            self.owner_id = False
 
     @api.constrains("mac_address")
     def _check_mac_format(self):

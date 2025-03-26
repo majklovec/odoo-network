@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!-- Custom Tree View for Partners -->
+    <record id="view_partner_custom_list" model="ir.ui.view">
+        <field name="name">res.partner.custom.list</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="street"/>
+                <field name="city"/>
+                <field name="zip"/>
+                <field name="payment_reference_id" />
+            </list>
+        </field>
+    </record>
+
+    <!-- Custom Action to Open the List View -->
+    <record id="action_partner_custom_list" model="ir.actions.act_window">
+        <field name="name">Users</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_partner_custom_list"/>
+        <field name="search_view_id" ref="base.view_res_partner_filter"/>
+        <field name="domain">[('company_type', '=', 'person')]</field>
+        <field name="context">{'res_partner_search_mode': 'customer','search_default_user': True}</field>
+    </record>
+
+
     <record id="view_partner_form_inherit" model="ir.ui.view">
         <field name="name">res.partner.form.inherit.network</field>
         <field name="model">res.partner</field>

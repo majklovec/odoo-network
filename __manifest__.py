@@ -7,9 +7,9 @@
         Partners can own multiple devices in different subnets.
     """,
     "category": "Network",
-    "author": "Your Name",
-    "website": "https://www.example.com",
-    "depends": ["base", "contacts"],
+    "author": "Michal Vondráček",
+    "website": "https://www.czela.net",
+    "depends": ["base"],
     "data": [
         "security/ir.model.access.csv",
         "views/subnet_views.xml",  # Load first
@@ -21,7 +21,7 @@
     "installable": True,
     "application": True,
     "auto_install": False,
-    "icon": "static/description/icon.png",
+    "icon": "/network/static/description/icon.png",
     "languages": {
         "cs": "Czech translations",
     },

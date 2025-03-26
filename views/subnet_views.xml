@@ -40,7 +40,7 @@
                             <field name="name"/>
                             <field name="mac_address"/>
                             <field name="ip_address"/>
-                            <field name="owner_id"/>
+                            <field name="partner_id"/>
                         </list>
                     </field>
                 </sheet>
