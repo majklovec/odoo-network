@@ -13,6 +13,23 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #. module: network
+#: model:ir.ui.menu,name:network.menu_network_management
+msgid "Network Management"
+msgstr "Správa sítě"
+
+#: __manifest__.py:0
+msgid "Manage network devices and subnets"
+msgstr "Správa síťových zařízení a podsítí"
+
+#: __manifest__.py:0
+msgid ""
+"Manage a network."
+"        Partners can own multiple devices in different subnets."
+msgstr "Správa ""
+ zařízení a podsítí v síti.\n"
+"        Partneři mohou vlastnit více zařízení v různých podsítích."
+
+#. module: network
 #: model:ir.model.fields,field_description:network.field_network_device__active
 msgid "Active"
 msgstr "Aktivní"

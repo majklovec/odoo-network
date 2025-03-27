@@ -1,9 +1,9 @@
 {
-    "name": "Metropolitan Network Management",
+    "name": "Network Management",
     "version": "1.0",
     "summary": "Manage network devices and subnets",
     "description": """
-        Manage devices and subnets in a metropolitan network.
+        Manage devices and subnets in a network.
         Partners can own multiple devices in different subnets.
     """,
     "category": "Network",
