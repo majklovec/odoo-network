@@ -13,23 +13,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #. module: network
-#: model:ir.ui.menu,name:network.menu_network_management
-msgid "Network Management"
-msgstr "Správa sítě"
-
-#: __manifest__.py:0
-msgid "Manage network devices and subnets"
-msgstr "Správa síťových zařízení a podsítí"
-
-#: __manifest__.py:0
-msgid ""
-"Manage a network."
-"        Partners can own multiple devices in different subnets."
-msgstr "Správa ""
- zařízení a podsítí v síti.\n"
-"        Partneři mohou vlastnit více zařízení v různých podsítích."
-
-#. module: network
 #: model:ir.model.fields,field_description:network.field_network_device__active
 msgid "Active"
 msgstr "Aktivní"
@@ -169,18 +152,12 @@ msgstr "Správa sítě"
 #. module: network
 #: model:ir.model,name:network.model_network_subnet
 msgid "Network Subnet"
-msgstr "Síťová podsíť"
+msgstr "Podsíť"
 
 #. module: network
-#: model:ir.model.fields,field_description:network.field_network_device__partner_id
+#: model:ir.model.fields,field_description:network.field_network_device__owner_id
 msgid "Owner"
 msgstr "Vlastník"
-
-#. module: network
-#: model:ir.model.fields,field_description:network.field_res_partner__payment_reference_id
-#: model:ir.model.fields,field_description:network.field_res_users__payment_reference_id
-msgid "Payment Reference Id"
-msgstr "Variabilní symbol"
 
 #. module: network
 #: model:ir.model.fields,field_description:network.field_network_device__subnet_id
@@ -199,12 +176,14 @@ msgid "Subnets"
 msgstr "Podsítě"
 
 #. module: network
-#: model:ir.model.fields,field_description:network.field_network_device__user_id
-msgid "User"
-msgstr "Uživatel"
-
-#. module: network
 #: model:ir.ui.menu,name:network.menu_partners
 #: model:ir.actions.act_window,name:network.action_partner_custom_list
 msgid "Users"
-msgstr "Uživatelé"
+msgstr "Členové"
+
+#. module: network
+#: model:ir.model.fields,field_description:network.field_res_partner__payment_reference_id
+#: model:ir.model.fields,field_description:network.field_res_users__payment_reference_id
+msgid "Payment Reference Id"
+msgstr "Variabilní symbol"
+
