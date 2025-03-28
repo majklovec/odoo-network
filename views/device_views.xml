@@ -13,11 +13,11 @@
         <field name="arch" type="xml">
             <list>
                 <field name="name"/>
-                <field name="mac_address"/>
-                <field name="ip_address"/>
-                <field name="partner_id"/>
-                <field name="subnet_id"/>
-                <field name="active"/>
+                <field name="mac_address" optional="show"/>
+                <field name="ip_address" optional="show"/>
+                <field name="partner_id" optional="show"/>
+                <field name="subnet_id" optional="show"/>
+                <field name="active" optional="show"/>
             </list>
         </field>
     </record>
@@ -34,7 +34,7 @@
                             <field name="mac_address"/>
                             <field name="ip_address"/>
                             <field name="subnet_id"/>
-                            <field name="partner_id" domain="[('is_company', '=', False)]"/>
+                            <field name="partner_id" domain="[('is_company', '=', False), ('customer_rank', '!=', 0)]"/>
                             <field name="active"/>
                         </group>
                     </group>

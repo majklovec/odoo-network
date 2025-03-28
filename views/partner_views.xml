@@ -7,12 +7,12 @@
         <field name="arch" type="xml">
             <list>
                 <field name="name"/>
-                <field name="login"/>
-                <field name="email"/>
-                <field name="street"/>
-                <field name="city"/>
-                <field name="zip"/>
-                <field name="payment_reference_id" />
+                <field name="login" optional="hide" />
+                <field name="email" optional="show"/>
+                <field name="street" optional="show"/>
+                <field name="city" optional="show"/>
+                <field name="zip" optional="hide"/>
+                <field name="payment_reference_id" optional="hide" />
             </list>
         </field>
     </record>
@@ -24,7 +24,7 @@
         <field name="view_mode">list,form</field>
         <field name="view_id" ref="view_partner_custom_list"/>
         <field name="search_view_id" ref="base.view_res_partner_filter"/>
-        <field name="domain">[('company_type', '=', 'person')]</field>
+        <field name="domain">[('is_company', '=', False), ('customer_rank', '!=', 0)]</field>
         <field name="context">{'res_partner_search_mode': 'customer','search_default_user': True}</field>
     </record>
 
