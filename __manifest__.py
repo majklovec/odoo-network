@@ -8,7 +8,7 @@
     """,
     "category": "Network",
     "author": "Michal Vondráček",
-    "website": "https://www.czela.net",
+    "website": "https://www.optimal4.cz",
     "depends": ["base"],
     "data": [
         "security/ir.model.access.csv",

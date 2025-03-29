@@ -34,7 +34,7 @@
                             <field name="mac_address"/>
                             <field name="ip_address"/>
                             <field name="subnet_id"/>
-                            <field name="partner_id" domain="[('is_company', '=', False), ('customer_rank', '!=', 0)]"/>
+                            <field name="partner_id" domain="[('is_company', '=', False), ('parent_id', '=', False)]"/>
                             <field name="active"/>
                         </group>
                     </group>
