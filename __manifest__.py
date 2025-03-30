@@ -25,4 +25,5 @@
     "languages": {
         "cs": "Czech translations",
     },
+    "license": "LGPL-3",
 }
