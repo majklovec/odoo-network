@@ -34,7 +34,6 @@
                             <field name="description" />
                         </group>
                     </group>
-                    <!-- Proper One2many definition for form view -->
                     <field name="device_ids">
                         <list>
                             <field name="name"/>
