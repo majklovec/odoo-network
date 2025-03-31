@@ -14,7 +14,7 @@
             <list>
                 <field name="name"/>
                 <field name="mac_address" optional="show"/>
-                <field name="ip_address" optional="show"/>
+                <field name="ip_address" optional="show" string="IP Address" />
                 <field name="partner_id" optional="show"/>
                 <field name="subnet_id" optional="show"/>
                 <field name="active" optional="show"/>
@@ -32,7 +32,7 @@
                         <group>
                             <field name="name"/>
                             <field name="mac_address"/>
-                            <field name="ip_address"/>
+                            <field name="ip_address" optional="show" string="IP Address" />
                             <field name="subnet_id"/>
                             <field name="partner_id" domain="[('is_company', '=', False), ('parent_id', '=', False)]"/>
                             <field name="active"/>

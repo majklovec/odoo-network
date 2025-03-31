@@ -13,7 +13,8 @@
             <list>
                 <field name="name"/>
                 <field name="cidr"/>
-                <field name="description" optional="hide"/>
+                <field name="router_id" optional="hide"/>
+                <field name="filter" optional="hide"/>
                 <field name="device_ids" optional="hide"/>
             </list>
         </field>
@@ -26,19 +27,16 @@
             <form>
                 <sheet>
                     <group>
-                        <group>
-                            <field name="name"/>
-                            <field name="cidr"/>
-                        </group>
-                        <group>
-                            <field name="description" />
-                        </group>
+                        <field name="name"/>
+                        <field name="cidr"/>
+                        <field name="router_id"/>
+                        <field name="filter" optional="hide"/>
                     </group>
                     <field name="device_ids">
                         <list>
                             <field name="name"/>
                             <field name="mac_address"/>
-                            <field name="ip_address"/>
+                            <field name="ip_address" optional="show" />
                             <field name="partner_id" optional="hide"/>
                         </list>
                     </field>

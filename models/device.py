@@ -7,10 +7,18 @@ import re
 class Device(models.Model):
     _name = "network.device"
     _description = "Network Device"
+    _order = "ip_integer"
 
     name = fields.Char(string="Device Name")
     mac_address = fields.Char(string="MAC Address", required=True)
     ip_address = fields.Char(string="IP Address", required=True)
+    ip_integer = fields.Integer(
+        compute="_compute_ip_integer",
+        store=True,
+        index=True,
+        string="IP Integer",
+        help="Numerical representation of the IP for sorting",
+    )
     subnet_id = fields.Many2one("network.subnet", string="Subnet", required=True)
     active = fields.Boolean(string="Active", default=True)
     partner_id = fields.Many2one("res.partner", string="Owner", required=True)
@@ -28,6 +36,19 @@ class Device(models.Model):
             "IP must be unique per subnet!",
         ),
     ]
+
+    @api.depends("ip_address")
+    def _compute_ip_integer(self):
+        """Convert valid IPv4 address to integer for sorting"""
+        for device in self:
+            if device.ip_address:
+                try:
+                    ip = ipaddress.IPv4Address(device.ip_address)
+                    device.ip_integer = int(ip)
+                except ipaddress.AddressValueError:
+                    device.ip_integer = 0
+            else:
+                device.ip_integer = 0
 
     @api.constrains("mac_address")
     def _check_mac_format(self):

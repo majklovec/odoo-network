@@ -7,6 +7,14 @@ class ResPartner(models.Model):
     def _default_payment_reference(self):
         return self.env["ir.sequence"].next_by_code("partner.payment.ref")
 
+    @api.model
+    def _get_default_country(self):
+        country = self.env["res.country"].search([("code", "=", "CZ")], limit=1)
+        return country
+
+    country_id = fields.Many2one(
+        "res.country", string="Country", default=_get_default_country
+    )
     device_ids = fields.One2many("network.device", "partner_id", string="Devices")
     payment_reference_id = fields.Char(
         string="Payment Reference Id", default=_default_payment_reference

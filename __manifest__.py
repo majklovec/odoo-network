@@ -9,19 +9,22 @@
     "category": "Network",
     "author": "Michal Vondráček",
     "website": "https://www.optimal4.cz",
-    "depends": ["base"],
+    "depends": ["base", "account", "ruian"],
     "data": [
         "security/ir.model.access.csv",
-        "views/subnet_views.xml",  # Load first
-        "views/device_views.xml",
-        "views/partner_views.xml",
-        "views/menu_views.xml",  # Load last
+        "views/network_subnet_views.xml",
+        "views/network_device_views.xml",
+        "views/res_partner_views.xml",
+        "views/network_menu_views.xml",
     ],
     "demo": [],
     "installable": True,
     "application": True,
     "auto_install": False,
     "icon": "/network/static/description/icon.png",
+    "external_dependencies": {
+        "python": ["pymysql"],
+    },
     "languages": {
         "cs": "Czech translations",
     },
