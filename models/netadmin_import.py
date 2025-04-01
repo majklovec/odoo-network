@@ -173,6 +173,8 @@ class NetworkImport(models.Model):
             "country_id": country_id,
             "category_id": [(4, category_map[user["status_value"]])],
             "bank_ids": self._prepare_bank_commands(user),
+            "comment": user["info"]
+            + ("<hr />" + user["notes"] if user["notes"] else ""),
         }
 
     def _prepare_bank_commands(self, user):
