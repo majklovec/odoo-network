@@ -3,4 +3,3 @@
 from . import subnet
 from . import device
 from . import partner
-from . import netadmin_import
