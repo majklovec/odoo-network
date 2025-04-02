@@ -15,6 +15,7 @@
         "views/network_subnet_views.xml",
         "views/network_device_views.xml",
         "views/res_partner_views.xml",
+        "views/network_menu.xml",
     ],
     "demo": [],
     "installable": True,
