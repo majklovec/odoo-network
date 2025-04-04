@@ -13,7 +13,7 @@
             <list>
                 <field name="name"/>
                 <field name="cidr"/>
-                <field name="router_id" optional="hide"/>
+                <field name="router_id" optional="show"/>
                 <field name="filter" optional="hide"/>
                 <field name="device_ids" optional="hide"/>
             </list>
